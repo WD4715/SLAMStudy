@@ -58,6 +58,7 @@ V^{}
 YV^{}
 $$
 Then the Y will be either 
+$$
 \begin{bmatrix}
 0&-1&0\\
 1&0&0\\
