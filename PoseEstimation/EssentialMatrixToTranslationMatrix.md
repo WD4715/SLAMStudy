@@ -16,7 +16,6 @@ Think about the Essential Matrix's meaning step by step:
   2. p' = K(RP+t)  
   
     [definition]
-    
     --> x<sub>1</sub> = K<sup>-1</sup>p  
     --> x<sub>2</sbu> = K<sup>-1</sup>p'  
   3. x<sup>2</sup> 	$\simeq$ Rx<sub>1</sub>+t$$  
