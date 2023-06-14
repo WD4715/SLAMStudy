@@ -18,6 +18,6 @@ Think about the Essential Matrix's meaning step by step:
     --> x<sub>2</sbu> = K<sup>-1</sup>p'
   3. x<sup>2</sup> 	$\simeq$ Rx<sub>1</sub>+t
     --> We can multiply left side **t**. Then t[t]<sub>x</sub>=0
-    [t]<sub>x</sbu> x<sub>2</sub> 
+    [t] <sub>x</sbu> x <sub>2</sub> 
     
   
