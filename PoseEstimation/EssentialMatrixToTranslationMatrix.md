@@ -14,7 +14,6 @@ We know that :
 Think about the Essential Matrix's meaning step by step:  
   1. p = KP (K : Camera Calibration Matrix)  
   2. p' = K(RP+t)  
-  
     [definition]
     --> x<sub>1</sub> = K<sup>-1</sup>p  
     --> x<sub>2</sbu> = K<sup>-1</sup>p'  
