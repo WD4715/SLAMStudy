@@ -46,8 +46,8 @@ E = U\sum_{}V^{T}
 \begin{bmatrix}
 1&0&0\\
 0&1&0\\
-0&0&
-0 \end{bmatrix}
+0&0&0
+\end{bmatrix}
 V^{}
 = U
 \begin{bmatrix}
@@ -56,4 +56,17 @@ V^{}
 0&0&0
 \end{bmatrix}
 YV^{}
+$$
+Then the Y will be either 
+\begin{bmatrix}
+0&-1&0\\
+1&0&0\\
+0&0&1
+\end{bmatrix}
+or 
+\begin{bmatrix}
+0&-1&0\\
+1&0&0\\
+0&0&1
+\end{bmatrix}^{T}
 $$
