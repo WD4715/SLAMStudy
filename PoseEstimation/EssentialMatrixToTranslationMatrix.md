@@ -49,5 +49,11 @@ E = U\sum_{}V^{T}
 0&0&
 0 \end{bmatrix}
 V^{}
-= U \begin{bmatrix}0&1&0\\-1&0&0\\0&0&0 \end{bmatrix} Y V^{}
+= U
+\begin{bmatrix}
+0&1&0\\
+-1&0&0\\
+0&0&0
+\end{bmatrix}
+YV^{}
 $$
