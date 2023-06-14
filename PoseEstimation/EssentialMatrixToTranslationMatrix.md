@@ -8,4 +8,4 @@ This is the relationship bewtween images and Point in the wowrld.
   3. epipolar plane : The plane connecting "Two Camera Orientation" and "Point in the world".
 
 We know that :
-  1. Essential Matrix is **E**=[t]~x~
+  1. Essential Matrix is **E**=[t]<sub>x</sub>
