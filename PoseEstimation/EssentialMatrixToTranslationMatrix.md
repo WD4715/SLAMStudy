@@ -32,7 +32,7 @@ Think about the Essential Matrix's meaning step by step:
     and We know the Essential Matrix's property is
     $\sum_{}$ =
     
-$$sum_{}=
+$$\sum_{}=
 \begin{bmatrix}
 1&0&0\\
 0&1&0\\
