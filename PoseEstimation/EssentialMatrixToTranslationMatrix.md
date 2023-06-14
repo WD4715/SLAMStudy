@@ -41,5 +41,7 @@ $$\sum_{}=
   -> So We Can modify this equation into 
   
 $$
-E = U\sum_{}V<sup>T</sup> = U\sum_{}V<sup>T</sup>
+E = U\sum_{}V^{T} 
+= U\\begin{bmatrix}1&0&0\\0&1&0\\0&0&0\end{bmatrix}V^{}
+= U\\begin{bmatrix}0&1&0\\-1&0&0\\0&0&0\end{bmatrix}YV^{}
 $$
