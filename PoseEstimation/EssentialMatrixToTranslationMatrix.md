@@ -29,6 +29,7 @@ Think about the Essential Matrix's meaning step by step:
     
   4. Singular Value Decomposition
     E = U $\sum_{}$ V<sup>T</sup> 
+    and We know the Essential Matrix's property is $\sum_$ = $\begin{matrix}1&0&0\\0&1&0\\0&0&1\\ \end{matrix}$
   
     
 
