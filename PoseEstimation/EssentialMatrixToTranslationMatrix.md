@@ -9,7 +9,7 @@ This is the relationship bewtween images and Point in the wowrld.
 
 We know that :
   1. Essential Matrix is **E**=[t]<sub>x</sub>R
-  2. Fundamental Matrix is **F**K<sup>-T</sup>E<sup>-1</sup>
+  2. Fundamental Matrix is **F** K<sup>-T</sup>E K<sup>-1</sup>
   
 Think about the Essential Matrix's meaning step by step:  
   1. p = KP (K : Camera Calibration Matrix)  
