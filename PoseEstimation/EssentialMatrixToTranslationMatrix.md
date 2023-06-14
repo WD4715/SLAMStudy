@@ -14,7 +14,9 @@ We know that :
 Think about the Essential Matrix's meaning step by step:  
   1. p = KP (K : Camera Calibration Matrix)  
   2. p' = K(RP+t)  
-    [definition]  
+  
+    [definition]
+    
     --> x<sub>1</sub> = K<sup>-1</sup>p  
     --> x<sub>2</sbu> = K<sup>-1</sup>p'  
   3. x<sup>2</sup> 	$\simeq$ Rx<sub>1</sub>+t$$  
@@ -23,11 +25,8 @@ Think about the Essential Matrix's meaning step by step:
     --> We can multiply lef side **x<sub>2</sub><sup>T</sup>**  
     x<sub>2</sub><sup>T</sup> [t] <sub>x</sub> x<sub>2</sub> $\simeq$ x<sub>2</sub><sup>T</sup> [t]<sub>x</sub>Rx<sub>1</sub>  
     We know that [t]<sub>x</sub>x<sub>2</sub> is prependicular to t and x<sub>2</sub>. Thus the left of Equation will be 0.  
-    Thus  
     x<sub>2</sub><sup>T</sup> [t]<sub>x</sub>Rx<sub>1</sub> = 0  
-    and the middle of this equation([t]<sub>x</sub>R is the Essential Matrix  
-    And we know that x<sub>1</sub> and x<sub>2</sub> is meter unit, not the pixel unit.  
-    So We can express this equation as pixel unit.  
+    and the middle of this equation([t]<sub>x</sub>R is the Essential Matrix. And we know that x<sub>1</sub> and x<sub>2</sub> is meter unit, not the pixel unit. So We can express this equation as pixel unit.  
     p<sub>2</sub><sup>T</sup>K<sup>T</sup>
 
   
