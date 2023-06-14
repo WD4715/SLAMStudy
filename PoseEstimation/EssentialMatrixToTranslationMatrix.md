@@ -17,7 +17,7 @@ Think about the Essential Matrix's meaning step by step:
     [definition]
     --> x<sub>1</sub> = K<sup>-1</sup>p  
     --> x<sub>2</sbu> = K<sup>-1</sup>p'  
-  3. x<sup>2</sup> 	$\simeq$ Rx<sub>1</sub>+t$$  
+  3. x<sup>2</sup> 	$\simeq$ Rx<sub>1</sub>+t  
     --> We can multiply left side **t**. Then t[t]<sub>x</sub>=0  
     [t] <sub>x</sub> x<sub>2</sub> $\simeq$ [t]<sub>x</sub>Rx<sub>1</sub>  
     --> We can multiply lef side **x<sub>2</sub><sup>T</sup>**  
@@ -26,6 +26,9 @@ Think about the Essential Matrix's meaning step by step:
     x<sub>2</sub><sup>T</sup> [t]<sub>x</sub>Rx<sub>1</sub> = 0  
     and the middle of this equation([t]<sub>x</sub>R is the Essential Matrix. And we know that x<sub>1</sub> and x<sub>2</sub> is meter unit, not the pixel unit. So We can express this equation as pixel unit.  
     p<sub>2</sub><sup>T</sup>K<sup>-T</sup>[t]<sub>x</sub>RKK<sup>-1</sup><p<sub>1</sub> = 0. And F(Fundamental Matrix) is K<sup>-T</sup>[t]<sub>x</sub>RK<sup>-1</sup>.
+    
+  4. Singular Value Decomposition
+    E = U$\sigma$V<sup>T</sup> 
   
     
 
