@@ -28,7 +28,7 @@ Think about the Essential Matrix's meaning step by step:
     p<sub>2</sub><sup>T</sup>K<sup>-T</sup>[t]<sub>x</sub>RKK<sup>-1</sup><p<sub>1</sub> = 0. And F(Fundamental Matrix) is K<sup>-T</sup>[t]<sub>x</sub>RK<sup>-1</sup>.
     
   4. Singular Value Decomposition
-    E = U$\sigma$V<sup>T</sup> 
+    E = U$&\sum$$V<sup>T</sup> 
   
     
 
