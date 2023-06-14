@@ -39,5 +39,7 @@ $$\sum_{}=
 \end{bmatrix}$$
 
   -> So We Can modify this equation into 
+  
 $$
 E = U\sum_{}V<sup>T</sup> = U\sum_{}V<sup>T</sup>
+$$
