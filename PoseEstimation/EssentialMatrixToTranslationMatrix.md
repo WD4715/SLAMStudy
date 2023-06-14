@@ -23,9 +23,9 @@ Think about the Essential Matrix's meaning step by step:
     --> We can multiply lef side **x<sub>2</sub><sup>T</sup>**  
     x<sub>2</sub><sup>T</sup> [t] <sub>x</sub> x<sub>2</sub> $\simeq$ x<sub>2</sub><sup>T</sup> [t]<sub>x</sub>Rx<sub>1</sub>  
     We know that [t]<sub>x</sub>x<sub>2</sub> is prependicular to t and x<sub>2</sub>. Thus the left of Equation will be 0.  
-    Thus
+    Thus  
     
-    x<sub>2</sub><sup>T</sup> [t]<sub>x</sub>Rx<sub>1</sub> = 0  
+    x<sub>2</sub><sup>T</sup>[t]<sub>x</sub>Rx<sub>1</sub>=0  
 
   
   
