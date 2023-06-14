@@ -25,6 +25,7 @@ Think about the Essential Matrix's meaning step by step:
     
     we know that [t]<sub>x</sub>x<sub>2</sub> is prependicular to t and x<sub>2</sub>. Thus the left of Equation will be 0.  
     Thus  
+    
     x<sub>2</sub><sup>T</sup> [t]<sub>x</sub>Rx<sub>1</sub> = 0  
     and the middle of this equation([t]<sub>x</sub>R is the Essential Matrix.  
     
