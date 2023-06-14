@@ -51,19 +51,38 @@ E = U\sum_{}V^{T}
 \begin{bmatrix}0&1&0\\
 -1&0&0\\
 0&0&0
-\end{bmatrix}YV^{}
+\end{bmatrix}U^{T} UYV^{T}
 $$
+
+Look at this equation. Then We will get the below realtionship.
+
+
+$$
+[t]_{x} =
+U 
+\begin{bmatrix}0&1&0\\
+-1&0&0\\
+0&0&0
+\end{bmatrix}U^{T}  and R = UYV^{T}
+$$
+
 Then the Y will be either 
+
 $$
-\begin{bmatrix}
-0&-1&0\\
+\begin{bmatrix}0&-1&0\\
 1&0&0\\
 0&0&1
 \end{bmatrix}
 or 
-\begin{bmatrix}
-0&-1&0\\
+\begin{bmatrix}0&-1&0\\
 1&0&0\\
 0&0&1
 \end{bmatrix}^{T}
 $$
+
+Thus if we can get the Essential matrix, then we also get the Rotation Matrix and translation from essential matrix.
+
+[tip]
+If we use keypoints and descriptors from ORB, then We will get the Essential Matrix.
+
+Because we know the pixel coordinate from the ORB and K(Camera Calibration Matrix). Then if we get the Essential matrix solving by SVD, Then we can get Rotation Matrix and Translation from Keypoint & Descriptors using ORB.
