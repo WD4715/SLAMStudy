@@ -2,4 +2,4 @@ This is the implementation of Bundle Adjustment.
 
 the sample output is below:
 
-https://github.com/WD4715/SlamPortfolio/assets/117700793/4628e638-93e6-4456-96c5-bb44e40117c6
+![BundleAdjustment](https://github.com/WD4715/SlamPortfolio/assets/117700793/7e7cc238-2fe6-4073-8295-03e739ddd6fd)
