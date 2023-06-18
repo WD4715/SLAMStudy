@@ -1,0 +1,4 @@
+/Users/wdkang/Desktop/visual_slam/BA/build/CMakeFiles/bal_common.dir
+/Users/wdkang/Desktop/visual_slam/BA/build/CMakeFiles/bundle_adjustment_ceres.dir
+/Users/wdkang/Desktop/visual_slam/BA/build/CMakeFiles/edit_cache.dir
+/Users/wdkang/Desktop/visual_slam/BA/build/CMakeFiles/rebuild_cache.dir

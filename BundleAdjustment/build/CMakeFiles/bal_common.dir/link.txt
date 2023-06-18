@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libbal_common.a CMakeFiles/bal_common.dir/common.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libbal_common.a
