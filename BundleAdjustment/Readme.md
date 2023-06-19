@@ -3,6 +3,7 @@ This is the implementation of Bundle Adjustment.
 the sample output is below:
 
 ![BundleAdjustment](https://github.com/WD4715/SlamPortfolio/assets/117700793/7e7cc238-2fe6-4073-8295-03e739ddd6fd)
+
 **1. Linear System and Kalman Filter**
   - We know that every measurement is affected by nois, so the pose *x* and landmark *y* here are regarded as **Random Variable that obey certain probability distriubtion instead of a single number.**
     Therefore, the question becomes: when I have some motion data *u* and observation data *z*, how to determine the state *x* and larmarks *y*'s distribution?
@@ -23,7 +24,7 @@ P(x_k|x_0, u_{1:k}, z_{1:k})
 P(z_k|x_k) P(x_k|x_0, u_{1:k}, z_{1:k-1})
 $$
 
-  - *P(z<sub>k</sub>|x<sub>k</sub>)* will be the *likelihood* and *P(x<sub<k</sub>|x<sub>0</sub>, u<sub>1:k</sub>, z<sub>1:k-1</sub>)* will be the prior.
+  - *P(z<sub>k</sub>|x<sub>k</sub>)* will be the *likelihood* and *P(x<sub>k</sub>|x<sub>0</sub>, u<sub>1:k</sub>, z<sub>1:k-1</sub>)* will be the prior.
   **The observation equation** gives the likelihood. And **the prior** can transform below:
   
 $$
@@ -38,7 +39,7 @@ $$
 =\int{P(x_k|x_{k-1}, x_0, u_{k}) P(x_{k_1}|x_0, u_{1:k-1}, z_{1:k-1})dx_{k-1}}
 $$
 
-  - This equation is actually the state distribution at time k-1. Then ***"How to derive the state distribution from time k-1 to timek?"***
+  - This equation is actually the state distribution at time k-1. Then ***"How to derive the state distribution from time k-1 to time k?"***
   Answer : We only need to maintain the current state estimation and update it incrementally. Futhermore, if it is assumed that the state quantity obes a ***Gaussian Distribution***, we only need to consider the state variable's mean and covariance.
 
   - Tip :
