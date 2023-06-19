@@ -107,7 +107,7 @@ $\check{x}_{k}=A_k\hat{x}$ *<sub>k-1</sub> + u<sub>k</sub>*  and $\check{P}_k=A_
 
 2. Update (Kalman gain)
 
- K = $\check{P}_k$ *C<sub>k</sub><sup>T</sup>(C<sub>k</sub>* $\check{P}_k$ *C<sub>k</sub><sup>T</sup>+Q<sub>k</sub>)<sup>-1</sup>*   
+ K = $\check{P}_k$ *C<sub>k</sub><sup>T</sup> (C<sub>k</sub>* $\check{P}_k$ *C<sub>k</sub><sup>T</sup>+Q<sub>k</sub>)<sup>-1</sup>*   
    
 3. Posterior 
 
