@@ -252,12 +252,46 @@ Schur Trick is known as the marginalization in SLAM research. The Linear Equatio
 $$
 \begin{equation}
    \begin{bmatrix} 
-   H_{11} & H_{12}  \\
-   H_{21} & H_{22}  \\
+   B & E  \\
+   E^{T} & C  \\
    \end{bmatrix}
    \begin{bmatrix} 
    \Delta x_{c} \\ 
    \Delta x_{p}  \\
+   \end{bmatrix}=
+   \begin{bmatrix} 
+   v \\ 
+   w \\
    \end{bmatrix}
 \end{equation}
 $$
+
+the above equation can be written like below(Gaussian Elimination on the linear equation): 
+
+$$
+\begin{equation}
+   \begin{bmatrix} 
+   I & -EC^{-1}  \\
+   0 & I  \\
+   \end{bmatrix}
+   \begin{bmatrix} 
+   B & E  \\
+   E^{T} & C  \\
+   \end{bmatrix}
+   \begin{bmatrix} 
+   \Delta x_{c} \\ 
+   \Delta x_{p}  \\
+   \end{bmatrix}=
+   \begin{bmatrix} 
+   I & -EC^{-1}  \\
+   0 & I  \\
+   \end{bmatrix}
+   \begin{bmatrix} 
+   v \\ 
+   w \\
+   \end{bmatrix}
+\end{equation}
+$$
+
+After the elimination, the first line of the equations becomes a term that has nothing to do with $\Delta x_p$. Take it out separately and get the incremental equation about the pose part:
+The Schur trick is to solve this equation first, then substitute the solved $\Delta x_c$ into the original equation, and then solve $\Delta x_p$. This process is called *marginalization or Schur elimination(Schur Trick)*
