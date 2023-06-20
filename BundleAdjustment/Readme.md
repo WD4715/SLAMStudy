@@ -245,3 +245,19 @@ For example Jacobian and Hessian will be like below:
 
 Therefore, the non-zero matrix block in the non-diagonal part of the ***H*** matrix can be understood as a connection between its corresponding two variables, or it can be called a constraint. Therefore, we found that the graph optimization structure is obviously related to the sparsity of the incremental equation.
 
+### 4. Schur Trick
+
+Schur Trick is known as the marginalization in SLAM research. The Linear Equation ***Hx=g*** can be rewritten as :
+
+$$
+\begin{equation}
+   \begin{bmatrix} 
+   H_{11} & H_{12}  \\
+   H_{21} & H_{22}  \\
+   \end{bmatrix}
+   \begin{bmatrix} 
+   \Delta x_{c} \\ 
+   \Delta x_{p}  \\
+   \end{bmatrix}
+\end{equation}
+$$
