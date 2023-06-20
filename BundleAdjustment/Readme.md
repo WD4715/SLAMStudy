@@ -4,7 +4,7 @@ the sample output is below:
 
 ![BundleAdjustment](https://github.com/WD4715/SlamPortfolio/assets/117700793/7e7cc238-2fe6-4073-8295-03e739ddd6fd)
 
-**1. Linear System and Kalman Filter**
+## 1. Linear System and Kalman Filter
   - We know that every measurement is affected by nois, so the pose *x* and landmark *y* here are regarded as **Random Variable that obey certain probability distriubtion instead of a single number.**
     Therefore, the question becomes: when I have some motion data *u* and observation data *z*, how to determine the state *x* and larmarks *y*'s distribution?
 
@@ -101,22 +101,22 @@ $$
 
   - If we use the Guassian Linear System and transform this equation we will get the result below:
 
-1. Predict
+### 1. Predict
    
 $\check{x}_{k}=A_k\hat{x}$ *<sub>k-1</sub> + u<sub>k</sub>*  and $\check{P}_k=A_k\hat{P}$ *<sub>k-1</sub> A<sub>k</sub><sup>T</sup> + R*
 
-2. Update (Kalman gain)
+### 2. Update (Kalman gain)
 
  K = $\check{P}_k$ *C<sub>k</sub><sup>T</sup> (C<sub>k</sub>* $\check{P}_k$ *C<sub>k</sub><sup>T</sup>+Q<sub>k</sub>)<sup>-1</sup>*   
    
-3. Posterior 
+### 3. Posterior 
 
  $\hat{x}_k=\check{x}_k+K(z_k-C_kx_k)$ and $\hat{P}_k=(I-KC_k)\check{P}_k$
 
-**2. Non-Linear System and Kalman Filter**
-	- The motion equation and observation equation in SLAM are usally nonlinear functions, especially the camera model in visual slam, which requires the camera projection model and the pose represented by SE(3).
- 	***A Gaussian distribution, after a nonlinear transformation, is often no longer Gaussian.*** 
-  	***Therefore,in a nonlinear system, we will get Extended Kalman Filter. The usual approach is to consider the first-order Taylor expansion of the motion equation and the observation equation near a certain point.***
+## 2. Non-Linear System and Kalman Filter
+- The motion equation and observation equation in SLAM are usally nonlinear functions, especially the camera model in visual slam, which requires the camera projection model and the pose represented by SE(3).
+***A Gaussian distribution, after a nonlinear transformation, is often no longer Gaussian.*** 
+***Therefore,in a nonlinear system, we will get Extended Kalman Filter. The usual approach is to consider the first-order Taylor expansion of the motion equation and the observation equation near a certain point.***
 	
 - Pose Estimation
   
@@ -134,7 +134,7 @@ $\check{x}_{k}=A_k\hat{x}$ *<sub>k-1</sub> + u<sub>k</sub>*  and $\check{P}_k=A_
 
 </div>
 
-1. Predict
+### 1. Predict
 
 <div align="center">
 
@@ -143,7 +143,7 @@ $\check{x}_{k}=f(\hat{x}$ *<sub>k-1</sub>, u <sub>k</sub>)* , and $\check{P}_k$ 
 </div>
 
 
-2. Update (Kalman gain)
+### 2. Update (Kalman gain)
 
 <div align="center">
 
@@ -161,7 +161,7 @@ $\check{x}_{k}=f(\hat{x}$ *<sub>k-1</sub>, u <sub>k</sub>)* , and $\check{P}_k$ 
 
 </div>
  
-3. Posterior
+### 3. Posterior
 
 <div align="center">
 
@@ -175,4 +175,50 @@ $\hat{P}_k = (I-K_hH)\check{P}_k$
 
 </div>
 
- 
+## 3. Bundle Adjustment and Graph Optimization
+	
+### 1. The Projection Model and Cost Function
+Let's denote that the observation model h():
+
+$$
+\mathcal{z}=\mathcal{h}(\mathcal{x}, \mathcal{y})
+$$
+
+Specially the ***x*** here refers to the pose of the camera. ->***x*** = ***R & T***(***T***) and y is the three-dimensional landmark ***p<sub>j</sub>***
+and look at the ***z***. ***z*** is the observation data which is the pixel coordinate at normalized plane. 
+and from the above information, we can write out the error of observation:
+
+$$
+\mathcal{e}=\mathcal{z} - \mathcal{h}(\mathcal{x}, \mathcal{y})
+$$
+
+Solving the least squares is equivalent to adjusting the pose and road signs at the same time, which is the so-called ***Bundle Adjustment***.
+
+### 2. Solving Bundle Adjustment
+
+- Although a single error term is only for one pose and one landmark, the overall BA is about optimizing all variables together.
+
+$$
+||\mathcal{f}(x+ \Delta x)||^2 \approx{} {{1} \over {2}} \Sigma_{i=1}^{m} \Sigma_{j=1}^{n} ||e_{ij}+\mathcal{F_{ij}}\Delta \epsilon +\mathcal{E_{ij}} \Delta \mathcal{p_j}||
+$$
+
+where F<sub>ij</sub> is the partial derivative of the entire cost function to the i-th pose, and E<sub>ij</sub> is the partial derivative of the function to the j-th landamrk.
+
+-> Then whether we use the Gauss Newton method or the Levenberg-Marguardt method, we will finallly face the incremental linear equation:
+
+$$
+\mathcal{H} \Delta \mathcal{x} = \mathcal{g}
+$$
+
+If we use the Gauss Newton : $\mathcal{H} = \mathcal{J}^T \mathcal{J}$ and Levenberg-Marguardt method : $\mathcal{H} = \mathcal{J}^T \mathcal{J} + \lambda I$ 
+
+### 3. Sparsity
+
+An important development of visual slam in the 21st century is to recognize the sparse structure of the matrix ***H***. The sparsity of the ***H*** matrix is caused by the Jacobian matrix ***J(x)***.
+Note that this error term only describes the residual about ***p<sub>j</sub> in T<sub>i</sub>***, and only involves the i-th camera pose and the j-th landmark. The derivatives of the remaining variables are all 0. Therefor, the Jacobian matrix corresponding to the error term has the following form:
+
+$$
+\mathcal{J_{ij}}(x) = (0_{2x6}, 0_{2x6}, 0_{2x6}, ..., {\partial{\mathcal{e_{ij}}} \over \partial{\mathcal{T_i}}}, ..., 0_{2x3}, 0_{2x3}, 0_{2x3}, ..., {\partial{\mathcal{e_{ij}}} \over \partial{\mathcal{p_i}}}, ... ,0_{2x3}) 
+$$
+
+![KakaoTalk_20230620_175212938](https://github.com/WD4715/SlamPortfolio/assets/117700793/b8607244-169e-4206-8dcf-83c5aff74794)
