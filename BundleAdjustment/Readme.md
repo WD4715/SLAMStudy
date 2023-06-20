@@ -222,3 +222,26 @@ $$
 $$
 
 ![KakaoTalk_20230620_175212938](https://github.com/WD4715/SlamPortfolio/assets/117700793/b8607244-169e-4206-8dcf-83c5aff74794)
+
+Let's denote the H like below:
+
+$$
+\begin{equation}
+   \mathcal{H} = \begin{matrix} 
+   H_{11} & H_{12}   \\
+   H_{21} & H_{22}  \\
+   \end{matrix} 
+\end{equation}
+$$
+
+Where ***H<sub>11</sub>*** is only related to camera poses and ***H_{22}*** is only to landmarks.
+
+
+For example Jacobian and Hessian will be like below:
+
+![KakaoTalk_20230620_181549964](https://github.com/WD4715/SlamPortfolio/assets/117700793/20784f2f-abdd-440d-92f9-9ec27b6b1130)
+
+ ![KakaoTalk_20230620_181603053](https://github.com/WD4715/SlamPortfolio/assets/117700793/176534a8-76f3-4cf5-978d-4b6de6afae2d)
+
+Therefore, the non-zero matrix block in the non-diagonal part of the ***H*** matrix can be understood as a connection between its corresponding two variables, or it can be called a constraint. Therefore, we found that the graph optimization structure is obviously related to the sparsity of the incremental equation.
+
