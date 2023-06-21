@@ -29,13 +29,13 @@
 ***Consideration for Fast***
 Because ***Fast*** fixed the radius of the circle as 3, there is also a scaling problem : a place that looks like a corner from a distance may not be a corner when it comes close. To solve those, ***ORB adds the description of scale and rotation***. The scale invariance is achieved by the ***image pyraid*** and detect corner points on each layer. The rotation of features is realized by the ***intensity centroid method***
 
-<div align="center>
+<div align="center">
   [Fast Scale Invariance : Image Pyraid]
 </div>
 
 ![Fast_scaleInvariance](https://github.com/WD4715/SlamPortfolio/assets/117700793/ad64cf48-3590-43e5-9158-81b3fc80af30)
 
-<div align="center>
+<div align="center">
   [Fast Rotation Invariance : Intensity Centroid Method]
 </div>
   
@@ -81,7 +81,7 @@ This is the relationship bewtween images and Point in the wowrld.
 
 
 
-<div align="center>
+<div align="center">
   
   ***We Can Calculate the Essential Matrix From at least matched 8 keypoints like below :***
 
