@@ -298,5 +298,13 @@ After the elimination, the first line of the equations becomes a term that has n
 The Schur trick is to solve this equation first, then substitute the solved $\Delta x_c$ into the original equation, and then solve $\Delta x_p$. This process is called *marginalization or Schur elimination(Schur Trick)*
 
 ***요약***
-Bundle Adjustment는 카메라의 상태와 Keypoint(특이점)에 대한 파라메터를 조정하는 것으로 이해해야한다.
-그 중에서 카메라 상태를 추정하는 방법 중 한 가지로 Kalman Filter가 이용될 수 있다.
+
+SLAM 과정 
+
+Frontend: ORB feature를 사용하여 이미지에서 특징점을 탐지하고 추출. 이 특징점은 후속 작업에 사용.
+
+카메라 모션: Kalman Filter를 사용하여 이전 시점과 현재 시점 사이의 상대적인 카메라 모션 (회전 및 이동)을 추정. Kalman Filter는 상태 추정을 위해 이전 정보와 현재 정보를 결합하여 최적의 추정치를 계산.
+
+Backend: Bundle Adjustment (BA)를 사용하여 최적의 3D 포인트와 카메라 모션을 추정. 이 과정에서 특징점 매칭, 이상치 제거, 최적화 등이 수행. BA를 통해 3D 포인트와 카메라 파라미터가 최적화되어 정확한 3D 재구성.
+
+이 세 가지 요소가 결합되어 카메라 모션 및 3D 재구성의 정확도를 향상.
