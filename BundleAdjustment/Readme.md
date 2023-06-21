@@ -4,6 +4,7 @@ the sample output is below:
 
 ![BundleAdjustment](https://github.com/WD4715/SlamPortfolio/assets/117700793/7e7cc238-2fe6-4073-8295-03e739ddd6fd)
 
+
 ## 1. Linear System and Kalman Filter
   - We know that every measurement is affected by nois, so the pose *x* and landmark *y* here are regarded as **Random Variable that obey certain probability distriubtion instead of a single number.**
     Therefore, the question becomes: when I have some motion data *u* and observation data *z*, how to determine the state *x* and larmarks *y*'s distribution?
