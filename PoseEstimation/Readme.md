@@ -1,4 +1,4 @@
-# Visual Odometry using ORB
+# Visual Odometry using ORB.
 
 ##  1. Feature Method
 - VO estimates the rough camera movement based on the consecutive image's information and ***provides a good initial value for the backend.***
