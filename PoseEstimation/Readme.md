@@ -13,6 +13,8 @@
   BRIEF : decrebe the surrounding image area where the feature points were extracted.
 
   ***Fast***
+
+
   step1. Select ***pixel p*** and its bright is ***I<sub>p</sub>***
   step2. Set a Threshold ***T***
   step3. Take the pixel ***p*** as the center, and select the 16 pixels on a circle with a radius of 3.
