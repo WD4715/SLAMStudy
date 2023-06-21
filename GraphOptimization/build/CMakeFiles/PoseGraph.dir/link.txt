@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -O3 -O3 -DNDEBUG  -rdynamic CMakeFiles/PoseGraph.dir/pose_graph_g2o_SE3.cpp.o  -o PoseGraph  /usr/local/lib/libfmt.a -lg2o_core -lg2o_stuff -lg2o_types_slam3d 
