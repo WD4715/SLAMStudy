@@ -296,3 +296,7 @@ $$
 
 After the elimination, the first line of the equations becomes a term that has nothing to do with $\Delta x_p$. Take it out separately and get the incremental equation about the pose part:
 The Schur trick is to solve this equation first, then substitute the solved $\Delta x_c$ into the original equation, and then solve $\Delta x_p$. This process is called *marginalization or Schur elimination(Schur Trick)*
+
+***요약***
+Bundle Adjustment는 카메라의 상태와 Keypoint(특이점)에 대한 파라메터를 조정하는 것으로 이해해야한다.
+그 중에서 카메라 상태를 추정하는 방법 중 한 가지로 Kalman Filter가 이용될 수 있다.
