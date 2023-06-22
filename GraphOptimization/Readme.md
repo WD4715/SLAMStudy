@@ -56,3 +56,11 @@ Ad(T)=
 \end{bmatrix}
 $$
 
+So we can modify $e_{ij}$ into $\hat{e}_{ij}$ using ***"left disturbance."***
+
+Let's modify this equation uing ***Talyor Expensing***
+
+$$
+\hat{e_{ij}}=log(T_{ij}^{-1} T_i^{-1} exp((- \delta \epsilon)^{\wedge} ) exp(\delta \epsilon)^{\wedge} T_{j})
+$$
+
