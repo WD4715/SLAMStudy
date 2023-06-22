@@ -61,6 +61,31 @@ So we can modify $e_{ij}$ into $\hat{e}_{ij}$ using ***"left disturbance."***
 Let's modify this equation uing ***Talyor Expensing***
 
 $$
-\hat{e_{ij}}=log(T_{ij}^{-1} T_i^{-1} exp((- \delta \epsilon)^{\wedge} ) exp(\delta \epsilon)^{\wedge} T_{j})
+\hat{e_{ij}}=log(T_{ij}^{-1} T_i^{-1} exp((- \delta \epsilon)^{\wedge} ) exp(\delta \epsilon)^{\wedge} T_{j})^{\vee}  
 $$
 
+$$
+=log(T_{ij}^{-1}T_i^{-1}T_{j}exp((-Ad(T_{j}^{-1}) \delta \epsilon)^{\wedge}) exp((Ad(T_{j}^{-1} \delta \epsilon))^{\wedge}))^{\vee} 
+$$
+
+$$
+\approx log(T_{ij}^{-1}T_{i}^{-1}T_{j}[I - (Ad(T_{j}^{-1}) \delta \epsilon_{i})^{\wedge} + (Ad(T_{j}^{-1}) \delta \epsilon_{j})^{\wedge}])^{\vee}
+$$
+
+$$
+\approx e_{ij} + {\partial{e_{ij}} \over \partial{\delta \epsilon_{i}}} \delta \epsilon_{i} + {\partial{e_{ij}} \over \partial{\delta \epsilon_{i}}} \delta \epsilon_{j}
+$$
+
+where the two Jacobians are:
+
+$$
+{\partial{e_{ij}} \over \partial{\delta \epsilon_{i}}} = - \mathcal{J_r^{-1}(e_{ij})Ad(T_{i}^{-1})}
+$$
+
+and
+
+$$
+{\partial{e_{ij}} \over \partial{\delta \epsilon_{j}}} = - \mathcal{J_r^{-1}(e_{ij})Ad(T_{j}^{-1})}
+$$
+
+So Our object is to mimizie the above error. That means that We can estimate the ***Camera pose using Keypoints constraints.***
